@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.chat-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.chat-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.chat-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.chat-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Estilos personalizados para o calendário */
+.calendar-custom.fc-dark {
+  --fc-border-color: theme('colors.gray.700');
+  --fc-page-bg-color: theme('colors.gray.800');
+  --fc-neutral-bg-color: theme('colors.gray.700');
+  --fc-list-event-hover-bg-color: theme('colors.gray.700');
+  --fc-today-bg-color: theme('colors.violet.900/0.3');
+}
+
+.calendar-custom.fc-dark .fc-toolbar-title {
+  color: theme('colors.white');
+}
+
+.calendar-custom.fc-dark .fc-button {
+  background-color: theme('colors.violet.600');
+  border-color: theme('colors.violet.700');
+  color: theme('colors.white');
+}
+
+.calendar-custom.fc-dark .fc-button:hover {
+  background-color: theme('colors.violet.700');
+  border-color: theme('colors.violet.800');
+}
+
+.calendar-custom.fc-dark .fc-button-active {
+  background-color: theme('colors.violet.800') !important;
+  border-color: theme('colors.violet.900') !important;
+}
+
+.calendar-custom.fc-dark .fc-daygrid-day-number,
+.calendar-custom.fc-dark .fc-col-header-cell-cushion {
+  color: theme('colors.gray.300');
+}
+
+.calendar-custom.fc-dark .fc-event {
+  border-radius: theme('borderRadius.md');
+}
+
+.calendar-custom.fc-dark .fc-timegrid-slot-label {
+  color: theme('colors.gray.300');
+}
+
+.calendar-custom.fc-dark .fc-day-today {
+  background-color: theme('colors.violet.900/0.3') !important;
+}
+
+.calendar-custom.fc-dark .fc-highlight {
+  background-color: theme('colors.violet.600/0.3') !important;
+}
