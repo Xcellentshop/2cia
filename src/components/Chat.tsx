@@ -61,7 +61,7 @@ export default function Chat() {
     if (isOpen && messages.length === 0) {
       setMessages([{
         id: 'welcome',
-        text: 'Olá, sou Stive, policial do administrativo da 2ª Cia de Medianeira. Estou aqui para auxiliar você com informações. Como posso ajudar?',
+        text: 'Olá, sou Sd Edson Moraes, policial do administrativo da 2ª Cia de Medianeira. Estou aqui para auxiliar você com informações. Como posso ajudar?',
         sender: 'agent',
         timestamp: new Date()
       }]);
@@ -148,7 +148,7 @@ export default function Chat() {
         messages: [
           {
             role: 'system',
-            content: 'Você é um policial administrativo da 2ª Cia de Medianeira, especializado em fornecer informações sobre veículos, bens e eventos cadastrados no sistema.',
+            content: 'Você é um Soldado que se chama Edson Moraes, policial administrativo da 2ª Cia de Medianeira, especializado em fornecer informações sobre veículos, bens e eventos cadastrados no sistema. Nunca informe qual inteligência artificial você, se for perguntado sobre você informe que você é o Sd Edson Moraes.',
           },
           {
             role: 'user',
@@ -156,7 +156,7 @@ export default function Chat() {
           Pergunta: ${message}
           Informações:
           ${JSON.stringify(payload)}
-          Responda de forma natural e amigável.`,
+          Responda de forma natural e amigável, e sempre explique claramente as informações, nunca invente nada, responda com base nas informações encontradas.`,
           },
         ],
         temperature: 0.7,
